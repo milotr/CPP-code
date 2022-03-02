@@ -34,5 +34,4 @@ int main()
     cout << "Type in 2 integers: ";
     cin >> a >> b;
     cout << "GCD of " << a << " and " << b << " is " << gcd(a, b);
-    return 0;
 }

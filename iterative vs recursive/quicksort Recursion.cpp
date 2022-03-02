@@ -1,3 +1,4 @@
+// Quicksort - Recursion
 #include "stdc++.h"
 using namespace std;
 
@@ -8,12 +9,12 @@ void swap(int *a, int *b)
     *b = t;
 }
 
-int partition(int ar[], int low, int high)
+int partition(int ar[], int start, int end)
 {
-    int pivot = ar[high];
-    int i = (low - 1);
+    int pivot = ar[end];
+    int i = (start - 1);
 
-    for (int j = low; j <= high - 1; j++)
+    for (int j = start; j <= end - 1; j++)
     {
         if (ar[j] < pivot)
         {
@@ -21,18 +22,18 @@ int partition(int ar[], int low, int high)
             swap(&ar[i], &ar[j]);
         }
     }
-    swap(&ar[i + 1], &ar[high]);
+    swap(&ar[i + 1], &ar[end]);
     return (i + 1);
 }
 
-void quickSort(int ar[], int low, int high)
+void quickSort(int ar[], int start, int end)
 {
-    if (low < high)
+    if (start < end)
     {
-        int pi = partition(ar, low, high);
+        int pi = partition(ar, start, end);
 
-        quickSort(ar, low, pi);
-        quickSort(ar, pi, high);
+        quickSort(ar, start, pi);
+        quickSort(ar, pi, end);
     }
 }
 

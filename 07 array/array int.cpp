@@ -12,7 +12,7 @@ int main()
 
     for (size_t i{0}; i < values.size(); i++)
     {
-        values[i] = 2 + 2 * i;
+        values[i] = 2 + 2 * i; //writes values inside arrays
     }
 
     cout << "Element" << setw(10) << "Value" << endl;
@@ -20,6 +20,6 @@ int main()
     //output contents of array s in tabular format
     for (size_t j{0}; j < values.size(); ++j)
     {
-        cout << setw(7) << j << setw(10) << values[j] << endl;
+        cout << setw(7) << j << setw(10) << values[j] << endl; // prints out the number and values
     }
 }
